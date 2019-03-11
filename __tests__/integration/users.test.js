@@ -8,7 +8,7 @@ const app = require("../../app");
 const User = require("../../models/user");
 
 describe("GET /users", async function() {
-  test("Gets a list of 1 user", async function() {
+  test("Gets a list of all users", async function() {
     const response = await request(app).get("/users");
     const data = response.body.metadata;
     expect(data.num_results).toEqual(5);
